@@ -1,5 +1,4 @@
 // WEB3 Functionality and authenticaton via Moralis.io
-alert(`hello`);
 Moralis.initialize("Lqss60yyB8ieoEeePZLkFnqjdV6aQWiFuQYCTMhg"); // Application id from moralis.io
 Moralis.serverURL = "https://izxlfdhgdzwn.moralis.io:2053/server"; //Server url from moralis.io
 
