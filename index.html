@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>DigiDog</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/0f643e2f0c.js" crossorigin="anonymous"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+  <!-- Web3 Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script src="https://npmcdn.com/moralis@0.0.6/dist/moralis.js"></script>
+
+
+</head>
+
+<body>
+
+  <script>
+    Moralis.initialize("Lqss60yyB8ieoEeePZLkFnqjdV6aQWiFuQYCTMhg"); // Application id from moralis.io
+    Moralis.serverURL = "https://izxlfdhgdzwn.moralis.io:2053/server"; //Server url from moralis.io
+
+    async function login() {
+      console.log("login clicked");
+      var user = await Moralis.Web3.authenticate();
+      if (user) {
+        console.log(user)
+        user.set("nickname", "SATOSHI");
+        user.set("fav_color", "blue");
+        user.save();
+      }
+
+    }
+  </script>
+
+
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">Digi<i class="fas fa-dog"></i>Dog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Team</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">Download</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Nav Bar -->
+
+
+      <!-- Title -->
+
+      <div class="row">
+        <div class="col-lg-6">
+          <h1 class="big-heading">Let the big dog guard your crypto.</h1>
+          <a href="https://www.apple.com/app-store/"><button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button></a>
+          <a href="https://play.google.com/store"><button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-google-play"></i> Download</button></a>
+          <button onclick="login()" type="button" class="btn btn-outline-light btn-lg download-button"><i class="fas fa-arrow-alt-circle-right"></i> Connect WEB3 wallet</button>
+        </div>
+
+        <div class="col-lg-6">
+          <img class="title-image" src="images/iphone6.png" alt="mobile-phone">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- Features -->
+
+  <section class="white-section" id="features">
+
+ <div class="container-fluid">
+
+    <div class="row">
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-check-circle fa-4x"></i>
+        <h3 class="feature-title">Guaranteed to work</h3>
+        <p>60% of the time, it works every time.</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-user-secret fa-4x"></i>
+        <h3 class="feature-title">Badass encryption</h3>
+        <p>If at first you don't succeed, you're not Chuck Norris.</p>
+      </div>
+
+      <div class="feature-box col-lg-4">
+        <i class="icon fas fa-certificate fa-4x"></i>
+        <h3 class="feature-title">Nakomoto Certified</h3>
+        <p>The wallet of choice for all crypto OG's.</p>
+      </div>
+
+    </div>
+
+ </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section class="colored-section" id="testimonials">
+
+    <div id="testimonial-carousel" class="carousel slide" data-ride="false">
+      <div class="carousel-inner">
+        <div class="carousel-item active container-fluid">
+          <h2 class="testimonial-text">"I no longer have to store my coins on an exchange. These are my keys and this is my crypto!"</h2>
+          <img class="testimonial-image" src="images/lady-img.jpg" alt="woman-profile">
+          <em>Angela, a cute girl from New York</em>
+        </div>
+        <div class="carousel-item container-fluid">
+          <h2 class="testimonial-text">"I used to be a shitcoin addict, but after losing my house and my left kidney I learned my lesson!"</h2>
+          <img class="testimonial-image" src="images/man-img.jpg" alt="man-profile">
+          <em>Mikey, smiley guy from Florida</em>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#testimonial-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </a>
+      <a class="carousel-control-next" href="#testimonial-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </a>
+    </div>
+
+  </section>
+
+
+  <!-- Press -->
+
+  <section class="colored-section" id="press">
+    <img class="press-logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="press-logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press-logo" src="images/ivanontech.png" alt="lightning-logo">
+    <img class="press-logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section class="white-section" id="pricing">
+
+    <h2 class="section-heading">A plan for every crypto investor's needs</h2>
+    <p>Simple and affordable price plans for your and your portfolio of shitcoins.</p>
+
+<div class="row">
+
+<div class="pricing-column col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Humble Hodl</h3>
+      </div>
+
+      <div class="card-body">
+        <h2 class="price-text">Free</h2>
+        <p>Unlimited App Usage</p>
+        <p>Multi-currency support</p>
+        <p>One free withdrawal a month</p>
+        <button type="button" class="btn btn-lg btn-block btn-outline-dark">Sign Up</button>
+      </div>
+    </div>
+</div>
+
+
+<div class="pricing-column col-lg-4 col-md-6">
+    <div class="card">
+      <div class="card-header">
+        <h3>Crypto Padawan</h3>
+      </div>
+
+      <div class="card-body">
+        <h2 class="price-text">$25 / mo</h2>
+        <p>Special newsletters</p>
+        <p>Unlimited withdrawals</p>
+        <p>Unlimited App Premium</p>
+        <button type="button" class="btn btn-lg btn-block btn-dark">Sign Up</button>
+      </div>
+    </div>
+  </div>
+
+<div class="pricing-column col-lg-4">
+    <div class="card">
+      <div class="card-header">
+        <h3>Crypto Jedi</h3>
+      </div>
+
+      <div class="card-body">
+        <h2 class="price-text">$50 / mo</h2>
+        <p>Crypto Cashback</p>
+        <p>Monthly VIP webinars</p>
+        <p>Exclusive NFT sales</p>
+        <button type="button" class="btn btn-lg btn-block btn-dark">Sign Up</button>
+      </div>
+    </div>
+</div>
+
+</div>
+
+  </section>
+
+
+  <!-- Call to Action -->
+
+  <section class="colored-section" id="cta">
+
+   <div class="container-fluid">
+
+    <h3 class="cta-heading">The guard dog of your crypto assets.</h3>
+    <a href="https://www.apple.com/app-store/"><button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button></a>
+    <a href="https://play.google.com/store"><button type="button" class="btn btn-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button></a>
+
+   </div>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer class="white-section" id="footer">
+
+   <div class="container-fluid">
+
+    <a href="https://www.facebook.com/"><i class="social-icon fab fa-facebook-square"></i></a>
+    <a href="https://twitter.com/"><i class="social-icon fab fa-twitter-square"></i></a>
+
+
+    <a href="https://www.instagram.com/"><i class="social-icon fab fa-instagram"></i></a>
+    <a href="https://mail.google.com/mail"><i class="social-icon far fa-envelope"></i></a>
+    <p>© Copyright 2021 DigiDog</p>
+
+   </div>
+
+  </footer>
+
+
+</body>
+
+</html>
