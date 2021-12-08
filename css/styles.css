@@ -112,7 +112,7 @@ p {
   transition: all 0.2s;
 }
 
-.nav-link:hover {
+.language:hover {
   font-weight: 200;
   transform: translateY(-0.5rem);
 }
