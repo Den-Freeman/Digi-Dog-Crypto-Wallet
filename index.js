@@ -2,6 +2,7 @@
 Moralis.initialize("Lqss60yyB8ieoEeePZLkFnqjdV6aQWiFuQYCTMhg"); // Application id from moralis.io
 Moralis.serverURL = "https://izxlfdhgdzwn.moralis.io:2053/server"; //Server url from moralis.io
 
+// WEB3 Functionality function
 
 async function login() {
   console.log("login clicked");
